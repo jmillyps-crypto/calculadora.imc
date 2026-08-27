@@ -1,0 +1,57 @@
+* { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:  #84B067;
+    height: 130px;
+    width: 100%;
+
+    h1{
+        font-size: 50px;
+        color: aliceblue;
+        text-shadow: 2px 3px silver;
+        
+    }
+
+    h2{
+        font-size: 40px;
+        color: aliceblue;
+        font-weight: lighter;
+    }
+}
+fieldset{
+    margin: 20px;
+    border: 2px solid black;
+    width: 700px;
+    height: 300px;
+
+    .perguntas{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+}
+.legenda{
+    text-align: center;
+    font-size: 30px;
+   
+}
