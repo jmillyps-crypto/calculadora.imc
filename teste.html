@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        // var h1 = document.querySelector("h1")
+        // h1.innerHTML = 'SENAI É MÓ LEGAL'
+
+
+        // function modificaH1(){
+        //     var h1 = document.querySelector('h1')
+           
+        //     if(h1.innerHTML == 'Um texto legal aqui'){
+        //         h1.innerHTML = 'Gosto muito de TI'
+        //         h1.style.color = 'blue'
+        //     }
+        //     else{
+        //         h1.innerHTML = 'Um texto legal aqui'
+        //         h1.style.color = 'black'
+        //     }
+        // }
+
+        // function modificaH1(){
+        //     var div = document.querySelector('div')
+
+        //     var novo = document.createElement('h3')
+        //     novo.innerHTML = 'Novo elemento'
+        //     div.appendChild(novo)
+        // }
+
+        // function modificaFundo(){
+        //     var body = document.querySelector('body')
+        //     body.style.backgroundColor = "blue"
+        // }
+
+        function pegarInput(){
+            var nome = document.querySelector("#nome")
+            var h1 = document.querySelector("h1")
+
+            h1.innerHTML = nome.value
+
+            var cachorro = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvbH6BSYSlYtm8cvPOG4mWEoB9mnt6RPo7r0f1dcMx1yn6XLDL5xrFAIA&s=10"
+            var imagem = document.querySelector("#imagem")
+
+            imagem.setAttribute("src", cachorro)
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Um texto legal aqui</h1>
+    <h2>Outro texto legal aqui</h2>
+    <p>Calopsitas são legais</p>
+    <p id="amoti" class="ti">Eu amo TI S2</p>
+
+    <div></div>
+
+    <img src="" id="imagem" alt="">
+
+    <p>Digite seu nome: </p>
+    <input type="text" id = "nome" name="nome">
+
+    <button onclick="pegarInput()">Clique Aqui</button>
+    
+</body>
+</html>

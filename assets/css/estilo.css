@@ -1,0 +1,87 @@
+* { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:  #84B067;
+    height: 130px;
+    width: 100%;
+
+    h1{
+        font-size: 50px;
+        color: aliceblue;
+        text-shadow: 2px 3px silver;
+        
+    }
+
+    h2{
+        font-size: 40px;
+        color: aliceblue;
+        font-weight: lighter;
+    }
+}
+.formulario{
+    margin: 20px;
+    border: 2px solid black;
+    width: 700px;
+    height: 350px;
+
+
+    .perguntas{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 30px;
+        gap: 5px;
+        font-size: 20px;
+
+        input{
+            padding: 10px;
+        }
+        
+    }
+
+    .quadros{
+        border: 1px solid #84B067;
+        border-radius: 5px;
+        height: 27px;
+        width: 500px;
+    }
+
+}
+.legenda{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 10px;
+   
+}
+.botao{
+    margin-left: 150px;
+    background-color: #84B067;
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+#imagem {
+    width: 100px;
+    display: block;
+    margin: 20px auto;
+}
