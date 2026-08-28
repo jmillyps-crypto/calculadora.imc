@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
     <title>Calculadora de IMC</title>
-    <script></script>
+    <script defer>
+        function informaIMC(){
+
+            
+            var peso = Number(document.querySelector('#peso').value)
+            var altura = Number(document.querySelector('#altura').value)
+
+            var imc = peso / (altura * altura)
+
+            var div = document.querySelector('#mensagem')
+
+            var novo = document.createElement('h3')
+            novo.innerHTML = imc
+
+           var pamdaAbaixo = "img/pandaAbaixo.png"
+            var pamdaNormal = "img/pandaNormal.png"
+            var pamdaSobrepeso = "img/pandaSobrepeso.png"
+            var pamdaObeso = "img/pandaObeso.png"
+            var imagem = document.querySelector("#imagem")
+
+
+
+            if (imc < 18.5) {
+                novo.innerHTML = "Seu IMC é: " + imc + " - Abaixo do peso"
+                imagem.setAttribute("src", pamdaAbaixo)
+            } else if (imc < 25) {
+                novo.innerHTML = "Seu IMC é: " + imc + " - Peso normal"
+                imagem.setAttribute("src", pamdaNormal)
+            } else if (imc < 30) {
+                novo.innerHTML = "Seu IMC é: " + imc + " - Sobrepeso"
+                imagem.setAttribute("src", pamdaSobrepeso)
+            } else {
+                novo.innerHTML = "Seu IMC é: " + imc + " - Obesidade"
+                imagem.setAttribute("src", pamdaObeso)
+            }
+
+            div.appendChild(novo)
+
+            
+        }
+    </script>
 </head>
 <body>
     <div class="titulo">
@@ -13,39 +53,34 @@
         <h2>Descubre o quão saudável está!</h2>
     </div>
    
+    <section class="formulario">
+    
+        <form action="">
+            <fieldset>
+                <legend class="legenda">Informe seus dados</legend>
+                <div class="perguntas">
+                    <label>Digite sua altura (m)</label>
+                    <input type="text" id="altura" name="altura" placeholder="Ex: 1.60 " class="quadros">
 
-    <form action="">
-        <fieldset>
-            <legend class="legenda">Informe seus dados</legend>
-            <div class="perguntas">
-                <label>Digite sua altura</label>
-                <input type="text" id="altura" name="altura" required>
+                    <label>Digite seu peso (kg)</label>
+                    <input type="text" id="peso" name="peso" placeholder="Ex: 50" class="quadros">
 
-                <label>Digite seu peso</label>
-                <input type="text" id="peso" name="peso" required>
+                    <label>Sexo</label>
+                    <select name="sexo" id="sexo" class="quadros">
+                        <option disabled selected >Selecione uma opção</option>
+                        <option value="masculino">Homem</option>
+                        <option value="feminino">Mulher</option>
 
-                <label>Sexo</label>
-                <select name="sexo" id="sexo">
-                    <option disabled selected >Selecione uma opção</option>
-                    <option value="masculino">Homem</option>
-                    <option value="feminino">Mulher</option>
+                    </select>
 
-                </select>
-
-                <label>Voce é</label>
-                <select name="sexo" id="sexo">
-                    <option disabled selected >Selecione uma opção</option>
-                    <option value="adulto">Adulto</option>
-                    <option value="crianca">Criança</option>
-
-                </select>
-
-
-            </div>
-            
-        </fieldset>
-        <button onclick="">Enviar</button>
-    </form>
+                </div>
+                
+            </fieldset>
+            <button type="button" onclick="informaIMC()" class="botao">Enviar</button>
+        </form>
+    </section>
+    <div id="mensagem"></div>
+    <img src="" id="imagem" alt="">
     
 </body>
 </html>
